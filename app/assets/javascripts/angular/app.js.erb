@@ -1,0 +1,10 @@
+var app = angular.module('Amazonny', ['ngResource', 'ngRoute']);
+
+app.config(function($routeProvider) {
+  $routeProvider
+    .when("/", {
+    	templateUrl: "<%= asset_path('assets/templates/items.html') %>",
+      controller: "ItemController"
+    });
+});
+
