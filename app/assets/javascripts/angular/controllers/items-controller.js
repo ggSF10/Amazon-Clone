@@ -1,14 +1,17 @@
-app.controller('ItemController', ['$scope', '$location', 'Item',
-  function($scope, $location, Item) {
-  
-  $scope.items = Item.query();
+app.controller('ItemController', ['$scope', '$location', 'Item', 'Cart',
+  function($scope, $location, Item, Cart){
 
-  $scope.buyItem = function(item) {
-  	if (item.quantity > 0) {
-  		Cart.addItem(item);
-  		item.quantity--;
-  	}
+  $scope.items = Item.query();
+  $scope.totalInCart = 0;
+
+  $scope.buyItem = function(item){
+    if(item.quantity > 0)
+      Cart.updateCart(item);
+    	$scope.totalInCart += 1;
   };
 
+  $scope.checkout = function(){
+    $location.path('/checkout');
+  };
 
 }]);
