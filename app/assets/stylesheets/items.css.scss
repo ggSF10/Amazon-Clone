@@ -1,3 +1,41 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.header {
+  display: block;
+  width: 98%;
+  text-align: right;
+}
+
+.cart-items,
+.payment {
+  border: 10px solid blue;
+  margin: 10px;
+}
+
+.checkout {
+  width: 175px;
+  height: 75px;
+}
+
+.item-summary {
+  display: inline-block;
+  float: left;
+  margin: 10px;
+}
+
+.add-to-cart {
+  width: 100px;
+  height: 20px;
+}
+
+.item-preview {
+  max-width: 100px;
+}
+
+
+.cart-items {
+  clear: both;
+}
